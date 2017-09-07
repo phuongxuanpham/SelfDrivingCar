@@ -1,2 +1,2 @@
-model_checkpoint_path: "network01.ckpt"
-all_model_checkpoint_paths: "network01.ckpt"
+model_checkpoint_path: "network_final.ckpt"
+all_model_checkpoint_paths: "network_final.ckpt"
