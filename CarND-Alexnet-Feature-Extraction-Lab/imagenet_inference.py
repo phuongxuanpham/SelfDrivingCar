@@ -19,7 +19,7 @@ sess = tf.Session()
 sess.run(init)
 
 # Read Images
-im1 = (imread("poodle.png")[:, :, :3]).astype(np.float32)
+im1 = (imread("shark.jpg")[:, :, :3]).astype(np.float32)
 im1 = im1 - np.mean(im1)
 
 im2 = (imread("weasel.png")[:, :, :3]).astype(np.float32)
