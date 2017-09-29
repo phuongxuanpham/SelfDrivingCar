@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>writeup_report1</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>writeup_report</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11820,7 +11820,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Files-Submitted-&amp;-Code-Quality">Files Submitted &amp; Code Quality<a class="anchor-link" href="#Files-Submitted-&amp;-Code-Quality">&#182;</a></h3><p>My project includes the following files:</p>
 <ul>
-<li>model.ipynb containing the script to create and train the model, data processing and tuning parameters.</li>
+<li>model.py containing the script to create and train the model, data processing and tuning parameters.</li>
 <li>drive.py for driving the car in autonomous mode</li>
 <li>model1.h5, model2.h5 containing trained convolution neural network</li>
 <li>writeup_report.html or writeup_report.pdf summarizing the results</li>
@@ -11831,7 +11831,7 @@ div#notebook {
 <pre><code>python drive.py model.h5
 
 </code></pre>
-<p>Due to a problem in my python environment, I create the pipeline in the model.ipynb instead of model.py as required. The model.ipynb file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.</p>
+<p>The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.</p>
 
 </div>
 </div>
@@ -12380,7 +12380,7 @@ div#notebook {
 <span class="kn">from</span> <span class="nn">keras.callbacks</span> <span class="k">import</span> <span class="n">ModelCheckpoint</span>
 
 <span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">,</span> <span class="n">ch</span> <span class="o">=</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">320</span><span class="p">,</span> <span class="mi">3</span>  <span class="c1"># image format</span>
-<span class="n">INPUT_SHAPE</span> <span class="o">=</span> <span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">col</span><span class="p">,</span><span class="n">ch</span><span class="p">)</span>
+<span class="n">input_shape</span> <span class="o">=</span> <span class="p">(</span><span class="n">row</span><span class="p">,</span><span class="n">col</span><span class="p">,</span><span class="n">ch</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">resize</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
     <span class="kn">from</span> <span class="nn">keras.backend</span> <span class="k">import</span> <span class="n">tf</span> <span class="k">as</span> <span class="n">ktf</span>   
@@ -12393,7 +12393,7 @@ div#notebook {
 <span class="c1">## Set up lambda layers for data preprocessing: </span>
 
 <span class="c1"># Set up cropping2D layer: cropping (top, bottom) (left, right) pixels </span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Cropping2D</span><span class="p">(</span><span class="n">cropping</span><span class="o">=</span><span class="p">((</span><span class="mi">60</span><span class="p">,</span><span class="mi">25</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)),</span> <span class="n">input_shape</span><span class="o">=</span><span class="n">INPUT_SHAPE</span><span class="p">))</span> 
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Cropping2D</span><span class="p">(</span><span class="n">cropping</span><span class="o">=</span><span class="p">((</span><span class="mi">60</span><span class="p">,</span><span class="mi">25</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)),</span> <span class="n">input_shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">))</span> 
 
 <span class="c1"># Add Lambda layer for resizing image (image, height, width, data_format)</span>
 <span class="c1">#model.add(Lambda(resize, input_shape=(75, 320, 3), output_shape=(66, 200, 3)))</span>
@@ -12949,7 +12949,7 @@ yxUAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">HTML</span>
@@ -12971,7 +12971,7 @@ yxUAAAAASUVORK5CYII=
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[1]:</div>
 
 
 
