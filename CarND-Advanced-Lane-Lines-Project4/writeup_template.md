@@ -99,7 +99,7 @@ I verified that my perspective transform was working as expected by drawing the 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
 ![alt text][image5]
-
+file:///Users/phuongpham/CarND/Projects/SelfDrivingCar/CarND-Advanced-Lane-Lines-Project4/examples/example_output.jpg
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 I did this in lines # through # in my code in `my_other_file.py`
